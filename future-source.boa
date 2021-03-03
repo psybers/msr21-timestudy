@@ -1,0 +1,7 @@
+P: output collection[string][string] of time;
+
+visit(input, visitor {
+    before r: Revision ->
+        if (r.commit_date > T"Thu Oct 31 00:00:00 UTC 2019")
+            P[input.project_url][r.id] << r.commit_date;
+});

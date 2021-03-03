@@ -1,0 +1,12 @@
+P: output collection[string][string] of time;
+
+last: Revision;
+
+visit(input, visitor {
+    before r: Revision -> {
+        if (def(last) && r.commit_date < last.commit_date)
+            if (!match("merge", lowercase(last.log)) && !match("merge", lowercase(r.log)))
+                P[input.project_url][r.id] << r.commit_date;
+        last = r;
+    }
+});
