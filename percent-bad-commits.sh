@@ -1,7 +1,7 @@
 #!/bin/sh
 
 cat order-output.txt | cut -d']' -f1 | cut -d'[' -f2 | sed 's/$/]/' > order-projects.pat
-fgrep -f order-projects.pat all-projects-revisions.txt | sort | uniq > order-project-total-revisions.txt
+fgrep -f order-projects.pat all-projects-revisions-output.txt | sort | uniq > order-project-total-revisions.txt
 cat order-output.txt | cut -d']' -f1 | cut -d'[' -f2 | sort | uniq -c > order-project-revisions.txt
 ORDER_TOTAL_COMMITS=$(cat order-project-total-revisions.txt | cut -d'=' -f2 | cut -d' ' -f2 | awk '{s+=$1} END {print s}')
 ORDER_BAD_COMMITS=$(cat order-project-revisions.txt | awk '{s+=$1} END {print s}')
@@ -12,7 +12,7 @@ echo "ORDER PERCENT BAD ${PERCENT_ORDER_BAD}%"
 rm order-projects.pat
 
 cat old-output.txt | cut -d']' -f1 | cut -d'[' -f2 | sed 's/$/]/'> old-projects.pat
-fgrep -f old-projects.pat all-projects-revisions.txt | sort | uniq > old-project-total-revisions.txt
+fgrep -f old-projects.pat all-projects-revisions-output.txt | sort | uniq > old-project-total-revisions.txt
 cat old-output.txt | cut -d']' -f1 | cut -d'[' -f2 | sort | uniq -c > old-project-revisions.txt 
 OLD_TOTAL_COMMITS=$(cat old-project-total-revisions.txt | cut -d'=' -f2 | cut -d' ' -f2 | awk '{s+=$1} END {print s}')
 OLD_BAD_COMMITS=$(cat old-project-revisions.txt | awk '{s+=$1} END {print s}')

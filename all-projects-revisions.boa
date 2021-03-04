@@ -1,0 +1,6 @@
+P: output sum[string] of int;
+
+visit(input, visitor {
+    before r: Revision ->
+            P[input.project_url] << 1;
+});
