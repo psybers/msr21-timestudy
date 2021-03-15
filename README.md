@@ -65,11 +65,15 @@ Note that this could take a substantial amount of time!
 
 ### To generate the list of all GitHub projects found:
 
+Used in section IV onward.
+
 ```sh
 make project-lists
 ```
 
 ### To generate list of good and bad (404) projects:
+
+Used in section IV onward.
 
 ```sh
 make gen-goodbad
@@ -83,6 +87,8 @@ Software Heritage's archive.
 
 ### Cache JSON files
 
+Used in section IV onward.
+
 Most of the remaining scripts rely on having JSON metadata for commits.  These
 JSON files are already cached in the dataset, but this is how you download tem:
 
@@ -91,6 +97,8 @@ make cache-json
 ```
 
 ### To generate commit.dates:
+
+Used in section IV onward.
 
 ```sh
 make gen-dates
@@ -102,13 +110,17 @@ by GitHub/SHA.
 This also generates the file `bad-commits-by-year.txt`.  This file is used to
 generate the filtering by year table for the bad commits.
 
-### To generate the filter by year table:
+### To calculate the number of commits found:
+
+Used in section IV on.
 
 ```sh
-make gen-filteryear-table
+make gen-commit-loc
 ```
 
 ### To generate git-svn.ids:
+
+Used in Section IV.A.
 
 ```sh
 make gen-gitsvn
@@ -116,11 +128,15 @@ make gen-gitsvn
 
 ### To generate order-verified.txt:
 
+Used in section IV.B.
+
 ```sh
 make gen-verified
 ```
 
 ### To generate logs-**.txt:
+
+Used in section IV.B, figures 2, 3.
 
 ```sh
 make gen-logs
@@ -134,23 +150,23 @@ This also generates the commit logs for 'bad' (out of order) commits in
 
 ### To calculate the number of commits by each user:
 
+Used in IV.B for item 2, Common Users.
+
 ```sh
 make gen-commit-users
 ```
 
 ### To calculate the number of commits per project:
 
+Used in IV.B for Item 3, Common Projects, also Table V.
+
 ```sh
 make gen-commit-proj
 ```
 
-### To calculate the number of commits found:
-
-```sh
-make gen-commit-loc
-```
-
 ### To calculate the number of duplicated commits:
+
+Used in section V.
 
 ```sh
 make calc-dupes
@@ -158,6 +174,16 @@ make calc-dupes
 
 ### To calculate the number of bad commits as percentage:
 
+Used in section V.
+
 ```sh
 make calc-percent-bad
+```
+
+### To generate the filter by year table:
+
+Used in section VI, table VI.
+
+```sh
+make gen-filteryear-table
 ```
