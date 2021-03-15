@@ -1,1 +1,31 @@
+MSR papers/
+
+# temp JSON dirs
+json-gh/
+json-sha/
+
+# security tokens
 *.token
+
+# generated text files
+all-projects.txt
+bad-commits-by-year.txt
+bad-projects.txt
+bad-sha-projects.txt
+commit-locations.txt
+commit-users.txt
+commit.dates
+dates-all.txt
+future-projects.txt
+git-svn.ids
+good-projects.txt
+good-sha-projects.txt
+logs-old.txt
+logs-order.txt
+old-project-revisions.txt
+old-project-total-revisions.txt
+old-projects.txt
+order-project-revisions.txt
+order-project-total-revisions.txt
+order-projects.txt
+order-verified.txt
