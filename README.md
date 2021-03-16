@@ -1,6 +1,8 @@
 # Usage
 
-All scripts were tested on OSX Catalina 10.15.7 with zsh 5.7.1 (x86_64-apple-darwin19.0).
+Tested on:
+ - OSX Catalina 10.15.7 with zsh 5.7.1 (x86_64-apple-darwin19.0)
+ - NixOS 21.05pre27280.f6b5bfdb470 with bash 4.4.23(1)-release
 
 ## Required software
 
