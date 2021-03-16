@@ -71,20 +71,6 @@ Used in section IV onward.
 make project-lists
 ```
 
-### To generate list of good and bad (404) projects:
-
-Used in section IV onward.
-
-```sh
-make gen-goodbad
-```
-
-This generates `good-[sha-]projects.txt` and `bad-[sha-]projects.txt`
-
-The `'bad'` list is used to avoid asking GitHub API for info on deleted
-projects.  The `'-sha-'` versions look for the missing GitHub projects on
-Software Heritage's archive.
-
 ### Cache JSON files
 
 Used in section IV onward.
@@ -126,17 +112,9 @@ Used in Section IV.A.
 make gen-gitsvn
 ```
 
-### To generate order-verified.txt:
-
-Used in section IV.B.
-
-```sh
-make gen-verified
-```
-
 ### To generate logs-**.txt:
 
-Used in section IV.B, figures 2, 3.
+Used in sections IV.A, IV.B, figures 2, 3.
 
 ```sh
 make gen-logs
@@ -148,6 +126,14 @@ This grabs the other commit logs that are not `git-svn` related and puts into
 This also generates the commit logs for 'bad' (out of order) commits in
 `logs-order.txt`.
 
+### To generate order-verified.txt:
+
+Used in section IV.B.
+
+```sh
+make gen-verified
+```
+
 ### To calculate the number of commits by each user:
 
 Used in IV.B for item 2, Common Users.
@@ -158,11 +144,25 @@ make gen-commit-users
 
 ### To calculate the number of commits per project:
 
-Used in IV.B for Item 3, Common Projects, also Table V.
+Used in IV.B for Item 3, Common Projects and Table V.
 
 ```sh
 make gen-commit-proj
 ```
+
+### To generate list of good and bad (404) projects:
+
+Used in section V.
+
+```sh
+make gen-goodbad
+```
+
+This generates `good-[sha-]projects.txt` and `bad-[sha-]projects.txt`
+
+The `'bad'` list is used to avoid asking GitHub API for info on deleted
+projects.  The `'-sha-'` versions look for the missing GitHub projects on
+Software Heritage's archive.
 
 ### To calculate the number of duplicated commits:
 
